@@ -33,4 +33,6 @@ function openMovie(id){
 
 window.location.href = "movie.html?id=" + id;
 
+}function watchMovie(link){
+    window.location.href = link;
 }
