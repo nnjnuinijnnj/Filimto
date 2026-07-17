@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+}
+
+
+/* Header */
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #e50914;
+    letter-spacing: 2px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #e50914;
+}
+
+
+header input {
+    background: #222;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    color: white;
+}
+
+
+
+/* Hero */
+
+.hero {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+
+    background:
+    linear-gradient(to right, #000, transparent),
+    url("https://via.placeholder.com/1200x500");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero h1 {
+    font-size: 60px;
+    color: #e50914;
+}
+
+
+.hero p {
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+
+button {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+}
+
+
+
+/* Movies */
+
+h2 {
+    margin: 30px;
+    font-size: 30px;
+}
+
+
+.movies {
+    display: flex;
+    gap: 25px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    width: 200px;
+    background: #161616;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(229,9,20,0.5);
+}
+
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.card h3 {
+    padding: 15px;
+}
+
+
+.card button {
+    margin: 0 15px 15px;
+}
+
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+header {
+    padding: 0 15px;
+}
+
+nav {
+    display:none;
+}
+
+.hero {
+    height:350px;
+    padding:25px;
+}
+
+.hero h1 {
+    font-size:40px;
+}
+
+.movies {
+    justify-content:center;
+}
+
+}
