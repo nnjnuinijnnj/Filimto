@@ -31,4 +31,6 @@ box.innerHTML += `
 
 function openMovie(id){
 
-window.location.href = "movie.html?id=" + id
+window.location.href = "movie.html?id=" + id;
+
+}
