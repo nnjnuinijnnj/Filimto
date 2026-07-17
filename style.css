@@ -179,3 +179,81 @@ nav {
 }
 
 }
+.movie-page {
+
+display:flex;
+gap:40px;
+padding:50px;
+
+}
+
+
+.big-poster {
+
+width:300px;
+border-radius:20px;
+
+}
+
+
+.movie-info {
+
+max-width:600px;
+
+}
+
+
+.movie-info h1 {
+
+font-size:45px;
+color:#e50914;
+margin-bottom:20px;
+
+}
+
+
+.movie-info p {
+
+font-size:20px;
+line-height:2;
+color:#ddd;
+
+}
+
+
+.details {
+
+display:flex;
+gap:20px;
+margin:25px 0;
+flex-wrap:wrap;
+
+}
+
+
+.details span {
+
+background:#222;
+padding:10px 15px;
+border-radius:20px;
+
+}
+
+
+
+@media(max-width:700px){
+
+.movie-page{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+.big-poster{
+
+width:250px;
+
+}
+
+}
