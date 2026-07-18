@@ -18,11 +18,11 @@
   },
 
   {
-    "id":3,
-    "title":"Maizen",
-    "category":"ماینکرفت",
-    "type":"گیم پلی",
-    "description":"جیجی و مایکی",
-    "watch":"game-watch.html"
-  }
+  "id":3,
+  "title":"Maizen",
+  "category":"ماینکرفت",
+  "type":"گیم پلی",
+  "description":"جیجی و مایکی",
+  "watch":"https://youtube.com/playlist?list=PLpEKVRRcoSUG0sFONbqRKiJ4lvGqZrgvc&si=Mt8dm1zqVWAq6gSh"
+}
 ]
