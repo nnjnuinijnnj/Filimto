@@ -397,3 +397,79 @@ transform:translateY(0);
 }
 
 }
+
+/* FilimKids */
+
+.kids-hero {
+
+height:400px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+padding:50px;
+
+background:
+linear-gradient(to right, rgba(0,0,0,.4), rgba(0,0,0,.1)),
+linear-gradient(135deg,#6dd5ed,#fbc2eb);
+
+border-radius:0 0 30px 30px;
+
+}
+
+
+.kids-hero h1 {
+
+font-size:60px;
+
+color:white;
+
+}
+
+
+.kids-hero p {
+
+font-size:24px;
+
+margin-top:20px;
+
+color:white;
+
+}
+
+
+
+.kids {
+
+display:flex;
+
+gap:25px;
+
+padding:30px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.kids .card {
+
+background:#fff3c4;
+
+color:#333;
+
+border-radius:25px;
+
+box-shadow:0 0 20px rgba(255,200,0,.4);
+
+}
+
+
+
+.kids .card h3 {
+
+color:#ff9800;
+
+}
