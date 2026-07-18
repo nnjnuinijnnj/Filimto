@@ -5,7 +5,7 @@
     "type": "کارتون",
     "category": "طنز",
     "description": "ماجراهای خنده‌دار تام و جری",
-    "poster": "https://via.placeholder.com/300x450",
+    "poster":"images/tomjerry.jpg"
     "watch": "https://youtube.com/playlist?list=PLZs0gQed9tMQcnKBoXtgJW7mq_LNtfB9g&si=L6QG4cFTDQhMiu7N"
   },
 
@@ -15,7 +15,7 @@
     "type": "انیمیشن",
     "category": "کمدی",
     "description": "ماجراهای جذاب مینیون‌های بامزه",
-    "poster": "https://via.placeholder.com/300x450",
+    "poster": "images/minions.jpg",
     "watch": "https://youtube.com/playlist?list=PLyP3Db1JZmvkJyU1agQiKFBRXYbwQt-Ai&si=NrdB8h1S_5E6fzQn"
   },
 
@@ -25,7 +25,7 @@
     "type": "انیمیشن",
     "category": "ماجراجویی",
     "description": "داستان ماشین‌های مسابقه‌ای",
-    "poster": "https://via.placeholder.com/300x450",
+    "poster": "images/cars.jpg",
     "watch": "https://youtube.com/playlist?list=PLLIU9nFd9IrFgbT41LV-2BiszzESvzjRK&si=tn2ijzq9co7htMeN"
   }
 ]
