@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "Minecraft",
+    "type": "گیم پلی",
+    "description": "ماجراجویی و ساخت و ساز در دنیای ماینکرفت.",
+    "watch": "لینک ویدیو"
+  },
+
+  {
+    "id": 2,
+    "title": "Roblox",
+    "type": "گیم پلی",
+    "description": "بازی‌های جذاب روبلاکس.",
+    "watch": "لینک ویدیو"
+  },
+
+  {
+    "id": 3,
+    "title": "Maizen",
+    "type": "گیم پلی",
+    "description": "ماجراجویی جیجی و مایکی در ماینکرفت.",
+    "watch": "https://youtube.com/playlist?list=PLc_ETR5VX54w&si=of-04UJJPKpQZQnY"
+  }
+]
