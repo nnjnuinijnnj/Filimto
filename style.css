@@ -60,18 +60,14 @@ header input {
 
 /* Hero */
 
-.hero {
-    height: 450px;
-    display: flex;
-    align-items: center;
-    padding: 50px;
-
+.hero{
+    height:500px;
     background:
-    linear-gradient(to right, #000, transparent),
-    url("https://via.placeholder.com/1200x500");
+    linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.2)),
+    url("images/zakhmkari.jpg");
 
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center;
 }
 
 
