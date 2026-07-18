@@ -1,25 +1,28 @@
 [
   {
-    "id": 1,
-    "title": "Minecraft",
-    "type": "گیم پلی",
-    "description": "ماجراجویی و ساخت و ساز در دنیای ماینکرفت.",
-    "watch": "لینک ویدیو"
+    "id":1,
+    "title":"Minecraft",
+    "category":"ماینکرفت",
+    "type":"گیم پلی",
+    "description":"ماجراجویی در دنیای ماینکرفت",
+    "watch":"game-watch.html"
   },
 
   {
-    "id": 2,
-    "title": "Roblox",
-    "type": "گیم پلی",
-    "description": "بازی‌های جذاب روبلاکس.",
-    "watch": "لینک ویدیو"
+    "id":2,
+    "title":"Roblox",
+    "category":"روبلاکس",
+    "type":"گیم پلی",
+    "description":"بهترین لحظات روبلاکس",
+    "watch":"game-watch.html"
   },
 
   {
-    "id": 3,
-    "title": "Maizen",
-    "type": "گیم پلی",
-    "description": "ماجراجویی جیجی و مایکی در ماینکرفت.",
-    "watch": "https://youtube.com/playlist?list=PLc_ETR5VX54w&si=of-04UJJPKpQZQnY"
+    "id":3,
+    "title":"Maizen",
+    "category":"ماینکرفت",
+    "type":"گیم پلی",
+    "description":"جیجی و مایکی",
+    "watch":"game-watch.html"
   }
 ]
