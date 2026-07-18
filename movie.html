@@ -28,55 +28,97 @@
 
 
 
-<section class="movie-page">
+<section class="movie-page" id="moviePage">
+
+</section>
+
+
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id");
+
+
+fetch("movies.json")
+.then(response => response.json())
+.then(movies => {
+
+
+const movie = movies.find(item => item.id == id);
+
+
+if(movie){
+
+
+document.getElementById("moviePage").innerHTML = `
 
 
 <img class="big-poster"
-src="https://via.placeholder.com/300x450">
+src="${movie.poster}">
 
 
 <div class="movie-info">
 
-<h1>زخم کاری</h1>
+
+<h1>${movie.title}</h1>
+
 
 <p>
-یک داستان جذاب و پرهیجان درباره قدرت، خانواده و رقابت.
+${movie.description}
 </p>
 
 
 <div class="details">
-<span>🎭 ژانر: درام</span>
-<span>📅 سال: ۱۴۰۰</span>
-<span>⭐ امتیاز: ۸.۵</span>
+
+<span>🎭 ژانر: ${movie.genre}</span>
+
+<span>📅 سال: ${movie.year}</span>
+
+<span>⭐ امتیاز: ${movie.rating}</span>
+
 </div>
 
 
-<button onclick="window.location.href='https://www.filimo.com/n/raymk'">
+
+<button onclick="watchMovie('${movie.watch || movie.playlist}')">
+
 ▶ تماشا
+
 </button>
+
 
 
 <button>
+
 📺 نمایش قسمت‌ها
+
 </button>
 
 
 </div>
 
 
-</section>
-
-<script src="script.js"></script>
-
-  <script>
-
-function watchMovie(){
-
-window.location.href = "watch.html";
+`;
 
 }
 
-  </script>
-  
+
+});
+
+
+
+function watchMovie(link){
+
+window.location.href = link;
+
+}
+
+
+</script>
+
+
+
 </body>
 </html>
