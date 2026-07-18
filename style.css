@@ -482,3 +482,18 @@ color:#00ff88;
 margin-bottom:20px;
 
 }
+
+.maizen-logo {
+
+width:50px;
+height:50px;
+
+background:linear-gradient(
+135deg,
+#ff0000 50%,
+#00c853 50%
+);
+
+border-radius:12px;
+
+}
