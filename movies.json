@@ -12,14 +12,14 @@
   },
 
   {
-    "id": 2,
-    "title": "فیلم نمونه",
-    "type": "فیلم",
-    "year": "۲۰۲۶",
-    "genre": "اکشن",
-    "rating": "9",
-    "poster": "https://via.placeholder.com/300x450",
-    "description": "یک فیلم جذاب.",
-    "watch": "https://example.com"
+  "id": 2,
+  "title": "جیران",
+  "type": "سریال",
+  "year": "۱۴۰۰",
+  "genre": "تاریخی، عاشقانه",
+  "rating": "8.3",
+  "poster": "https://via.placeholder.com/300x450",
+  "description": "داستان عاشقانه‌ای در دوران ناصرالدین شاه قاجار.",
+  "watch": "https://www.filimo.com/m/85465"
   }
 ]
