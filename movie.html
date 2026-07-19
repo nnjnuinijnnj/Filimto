@@ -128,7 +128,13 @@ ${movie.description}
 
 function watchMovie(link){
 
-window.open(link, "_blank");
+document.getElementById("transfer").classList.add("show");
+
+setTimeout(function(){
+
+window.open(link,"_blank");
+
+},5000);
 
 }
 
