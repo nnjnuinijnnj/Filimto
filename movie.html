@@ -140,13 +140,20 @@ ${movie.description}
 
 function watchMovie(link){
 
-document.getElementById("transfer").classList.add("show");
+const transfer = document.getElementById("transfer");
+
+transfer.classList.add("show");
+
+// جلوگیری از کلیک دوباره
+document.body.style.pointerEvents = "none";
 
 setTimeout(function(){
 
 window.open(link,"_blank");
 
-document.getElementById("transfer").classList.remove("show");
+// دوباره صفحه را به حالت عادی برگردان
+transfer.classList.remove("show");
+document.body.style.pointerEvents = "auto";
 
 },5000);
 
