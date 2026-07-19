@@ -15,19 +15,31 @@
 
 <div class="transfer-screen" id="transfer">
 
-🎬
+<div class="transfer-icon">🎬</div>
 
-<h2>در حال انتقال به فیلیمو...</h2>
-
-<p>
-لطفاً چند لحظه صبر کنید
-</p>
+<h2>
+در حال آماده‌سازی انتقال به فیلیمو...
+</h2>
 
 <div class="loading-bar">
 
 <div class="loading"></div>
 
 </div>
+
+<p>
+لطفاً تا پایان انتقال
+<br>
+این صفحه را نبندید.
+</p>
+
+<p class="thanks">
+❤️
+<br>
+از اینکه FILIMTO را انتخاب کرده‌اید،
+<br>
+سپاسگزاریم.
+</p>
 
 </div>
   
@@ -133,6 +145,8 @@ document.getElementById("transfer").classList.add("show");
 setTimeout(function(){
 
 window.open(link,"_blank");
+
+document.getElementById("transfer").classList.remove("show");
 
 },5000);
 
