@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مدیریت فیلیم‌بال</title>
+
+</head>
+
+<body>
+
+<h1>⚽ ثبت بازی جدید</h1>
+
+<label>تیم اول:</label>
+<br>
+<input id="home">
+
+<br><br>
+
+<label>تیم دوم:</label>
+<br>
+<input id="away">
+
+<br><br>
+
+<label>نتیجه:</label>
+<br>
+<input id="score">
+
+<br><br>
+
+<label>وضعیت:</label>
+<br>
+<input id="status">
+
+<br><br>
+
+<button onclick="saveMatch()">
+ثبت بازی
+</button>
+
+
+<script>
+
+function saveMatch(){
+
+let match = {
+home: document.getElementById("home").value,
+away: document.getElementById("away").value,
+score: document.getElementById("score").value,
+status: document.getElementById("status").value
+};
+
+
+localStorage.setItem(
+"match",
+JSON.stringify(match)
+);
+
+
+alert("✅ بازی ثبت شد");
+
+}
+
+</script>
+
+</body>
+</html>
