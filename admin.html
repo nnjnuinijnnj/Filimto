@@ -46,21 +46,31 @@
 
 function saveMatch(){
 
-let match = {
+function saveMatch(){
+
+let newMatch = {
+
 home: document.getElementById("home").value,
 away: document.getElementById("away").value,
 score: document.getElementById("score").value,
 status: document.getElementById("status").value
+
 };
 
 
+let matches = JSON.parse(localStorage.getItem("matches")) || [];
+
+
+matches.push(newMatch);
+
+
 localStorage.setItem(
-"match",
-JSON.stringify(match)
+"matches",
+JSON.stringify(matches)
 );
 
 
-alert("✅ بازی ثبت شد");
+alert("✅ بازی اضافه شد");
 
 }
 
