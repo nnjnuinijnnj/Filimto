@@ -1,54 +1,48 @@
-const matches = [
-    {
-        home: "🇪🇸 اسپانیا",
-        away: "🇦🇷 آرژانتین",
-        score: "1 - 0",
-        status: "پایان بازی"
-    },
+const API_KEY = "400ae25d8aee49bd93e10efb65b50462";
 
-    {
-        home: "🇬🇧 منچستر یونایتد",
-        away: "🇬🇧 چلسی",
-        score: "2 - 2",
-        status: "زنده"
-    },
-
-    {
-        home: "🇮🇹 اینتر",
-        away: "🇮🇹 میلان",
-        score: "-",
-        status: "فردا"
+fetch("https://api.football-data.org/v4/matches", {
+    headers: {
+        "X-Auth-Token": API_KEY
     }
-];
+})
+.then(response => response.json())
+.then(data => {
 
+    const box = document.getElementById("matches");
 
-const box = document.getElementById("matches");
+    data.matches.forEach(match => {
 
+        box.innerHTML += `
 
-matches.forEach(match => {
+        <div class="match-card">
 
-box.innerHTML += `
+            <h3>⚽ ${match.competition.name}</h3>
 
-<div class="match-card">
+            <p>
+            ${match.homeTeam.name}
+            </p>
 
-<h3>
-${match.status}
-</h3>
+            <div class="score">
+            ${match.score.fullTime.home ?? "-"}
+            -
+            ${match.score.fullTime.away ?? "-"}
+            </div>
 
-<p>
-${match.home}
-</p>
+            <p>
+            ${match.awayTeam.name}
+            </p>
 
-<div class="score">
-${match.score}
-</div>
+            <small>
+            ${match.status}
+            </small>
 
-<p>
-${match.away}
-</p>
+        </div>
 
-</div>
+        `;
 
-`;
+    });
 
+})
+.catch(error => {
+    console.log("خطا:", error);
 });
