@@ -1,61 +1,36 @@
-let box = document.getElementById("matches");
+const BIN_ID = "6a5e1738da38895dfe760a71";
+const API_KEY = "$2a$10$P22HFqWIle4Ax2r6HiUizuIGDtuqvM1Br2IdccDoJs7u924m60Y/W";
 
+fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+    headers: {
+        "X-Master-Key": API_KEY
+    }
+})
+.then(res => res.json())
+.then(data => {
 
-let matches = JSON.parse(localStorage.getItem("matches")) || [];
+    let box = document.getElementById("matches");
 
+    data.record.forEach(match => {
 
-if(matches.length > 0){
+        box.innerHTML += `
 
+        <div class="match-card">
 
-matches.forEach(match => {
+            <h3>⚽ ${match.home}</h3>
 
+            <div class="score">
+            ${match.score}
+            </div>
 
-box.innerHTML += `
+            <h3>${match.away}</h3>
 
-<div class="match-card">
+            <p>${match.status}</p>
 
-<h3>
-⚽ ${match.home}
-</h3>
+        </div>
 
+        `;
 
-<div class="score">
-${match.score}
-</div>
-
-
-<h3>
-${match.away}
-</h3>
-
-
-<p>
-${match.status}
-</p>
-
-
-</div>
-
-`;
-
+    });
 
 });
-
-
-}
-
-else{
-
-
-box.innerHTML = `
-
-<div class="match-card">
-
-⚽ هنوز بازی‌ای ثبت نشده
-
-</div>
-
-`;
-
-
-}
