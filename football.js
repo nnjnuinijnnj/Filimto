@@ -1,54 +1,49 @@
-const API_KEY = "400ae25d8aee49bd93e10efb65b50462";
+let box = document.getElementById("matches");
 
-fetch("https://api.football-data.org/v4/matches", {
-    headers: {
-        "X-Auth-Token": API_KEY
-    }
-})
-.then(response => response.json())
-.then(data => {
+let saved = localStorage.getItem("match");
 
-    if (!data.matches) {
-    document.getElementById("matches").innerHTML =
-    "<p>⚠️ اطلاعات بازی‌ها دریافت نشد</p>";
-    return;
-    }
-    
-    const box = document.getElementById("matches");
 
-    data.matches.forEach(match => {
+if(saved){
 
-        box.innerHTML += `
+let match = JSON.parse(saved);
 
-        <div class="match-card">
 
-            <h3>⚽ ${match.competition.name}</h3>
+box.innerHTML = `
 
-            <p>
-            ${match.homeTeam.name}
-            </p>
+<div class="match-card">
 
-            <div class="score">
-            ${match.score.fullTime.home ?? "-"}
-            -
-            ${match.score.fullTime.away ?? "-"}
-            </div>
+<h3>⚽ ${match.home}</h3>
 
-            <p>
-            ${match.awayTeam.name}
-            </p>
+<div class="score">
+${match.score}
+</div>
 
-            <small>
-            ${match.status}
-            </small>
+<h3>
+${match.away}
+</h3>
 
-        </div>
+<p>
+${match.status}
+</p>
 
-        `;
+</div>
 
-    });
+`;
 
-})
-.catch(error => {
-    console.log("خطا:", error);
-});
+}
+
+else{
+
+box.innerHTML = `
+
+<div class="match-card">
+
+<p>
+⚽ هنوز بازی‌ای ثبت نشده است
+</p>
+
+</div>
+
+`;
+
+}
