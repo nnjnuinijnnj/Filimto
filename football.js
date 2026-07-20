@@ -1,49 +1,61 @@
 let box = document.getElementById("matches");
 
-let saved = localStorage.getItem("match");
+
+let matches = JSON.parse(localStorage.getItem("matches")) || [];
 
 
-if(saved){
-
-let match = JSON.parse(saved);
+if(matches.length > 0){
 
 
-box.innerHTML = `
+matches.forEach(match => {
+
+
+box.innerHTML += `
 
 <div class="match-card">
 
-<h3>⚽ ${match.home}</h3>
+<h3>
+⚽ ${match.home}
+</h3>
+
 
 <div class="score">
 ${match.score}
 </div>
 
+
 <h3>
 ${match.away}
 </h3>
+
 
 <p>
 ${match.status}
 </p>
 
+
 </div>
 
 `;
+
+
+});
+
 
 }
 
 else{
 
+
 box.innerHTML = `
 
 <div class="match-card">
 
-<p>
-⚽ هنوز بازی‌ای ثبت نشده است
-</p>
+⚽ هنوز بازی‌ای ثبت نشده
 
 </div>
 
 `;
+
 
 }
