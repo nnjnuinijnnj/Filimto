@@ -79,48 +79,69 @@ placeholder="مثلاً: آیا فیلم جوکر در فیلیمو هست؟">
 
 <script>
 
+const responses = {
+
+"زخم کاری":"🎬 سریال زخم کاری موجود است.",
+
+"پایتخت":"📺 سریال پایتخت موجود است.",
+
+"جوکر":"😂 برنامه جوکر موجود است.",
+
+"جیران":"🎬 سریال جیران موجود است.",
+
+"پوست شیر":"🎬 سریال پوست شیر موجود است.",
+
+"یاغی":"🎬 سریال یاغی موجود است.",
+
+"قورباغه":"🎬 سریال قورباغه موجود است.",
+
+"افعی تهران":"🎬 سریال افعی تهران موجود است.",
+
+"خاتون":"🎬 سریال خاتون موجود است.",
+
+"دفتر یادداشت":"🎬 سریال دفتر یادداشت موجود است.",
+
+"هیولا":"🎬 سریال هیولا موجود است.",
+
+"قهوه تلخ":"☕ سریال قهوه تلخ موجود است.",
+
+"فیلم اکشن":"🔥 پیشنهاد: John Wick - Nobody - Extraction",
+
+"فیلم ترسناک":"👻 پیشنهاد: Conjuring - Smile - Insidious",
+
+"فیلم کمدی":"😂 پیشنهاد: Free Guy - The Mask",
+
+"فیلم عاشقانه":"❤️ پیشنهاد: Titanic - La La Land",
+
+"فیلم علمی تخیلی":"🚀 پیشنهاد: Interstellar - Dune",
+
+"فیلم ایرانی":"🇮🇷 پیشنهاد: فسیل - متری شیش و نیم",
+
+"فیلم خارجی":"🌍 پیشنهاد: Oppenheimer - Joker",
+
+"فیلم جدید":"🎬 در حال حاضر فیلم‌های جدید در حال اضافه شدن هستند.",
+
+"سریال جدید":"📺 جدیدترین سریال‌ها در حال اضافه شدن هستند."
+
+};
+
 function startAI(){
 
-const text=document.getElementById("searchBox").value.toLowerCase();
+const text=document.getElementById("searchBox").value.trim();
 
 const status=document.getElementById("status");
 
-const steps=[
-
-"🧠 در حال تحلیل درخواست...",
-
-"🔍 لطفاً کمی صبر کنید...",
-
-"🎬 در حال جستجوی هوشمند...",
-
-"📚 بررسی آرشیو فیلم‌ها..."
-
-];
-
-let i=0;
-
-status.innerHTML="";
-
-const timer=setInterval(()=>{
-
-status.innerHTML=steps[i];
-
-i++;
-
-if(i>=steps.length){
-
-clearInterval(timer);
-
-status.innerHTML="✅ نتیجه پیدا شد. در حال انتقال...";
+status.innerHTML="🤖 FilimTo AI در حال بررسی...";
 
 setTimeout(()=>{
 
-const query=encodeURIComponent(text);
+if(responses[text]){
 
-window.location.href=
-"https://www.filimo.com/search?q="+query;
+status.innerHTML=responses[text];
 
-},1800);
+}else{
+
+status.innerHTML="❌ متأسفم، این عنوان هنوز در دیتابیس FilimTo AI ثبت نشده است.";
 
 }
 
