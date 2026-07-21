@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FilimTo AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="ai-page">
+
+<h1 class="ai-logo">
+
+🤖 FILIMTO AI
+
+</h1>
+
+<p class="ai-text">
+
+هر فیلمی را از من بپرس...
+
+</p>
+
+<input
+id="searchBox"
+type="text"
+placeholder="مثلاً: آیا فیلم جوکر در فیلیمو هست؟">
+
+<br><br>
+
+<button onclick="startAI()">
+
+🔍 جستجو
+
+</button>
+
+<br><br>
+
+<div id="status">
+
+</div>
+
+</div>
+
+<script>
+
+function startAI(){
+
+const status=document.getElementById("status");
+
+status.innerHTML="🧠 در حال تحلیل درخواست...";
+
+setTimeout(()=>{
+
+status.innerHTML="🔍 لطفاً کمی صبر کنید...";
+
+},1500);
+
+setTimeout(()=>{
+
+status.innerHTML="🎬 هوش مصنوعی در حال جستجوی فیلم...";
+
+},3000);
+
+}
+
+</script>
+
+</body>
+
+</html>
