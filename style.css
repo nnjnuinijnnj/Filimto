@@ -1370,9 +1370,61 @@ scrollbar-width:none;
 
 }
 
+.quick-chat{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:10px;
+
+padding:18px;
+
+margin-top:10px;
+
+scroll-behavior:smooth;
+
+scrollbar-width:none;
+
+}
+
 .quick-chat::-webkit-scrollbar{
 
 display:none;
+
+}
+
+.quick-chat button{
+
+background:white;
+
+border:1px solid #E0E0E0;
+
+border-radius:30px;
+
+padding:12px 22px;
+
+font-size:15px;
+
+white-space:nowrap;
+
+cursor:pointer;
+
+transition:.25s;
+
+box-shadow:0 4px 15px rgba(0,0,0,.06);
+
+}
+
+.quick-chat button:hover{
+
+transform:translateY(-3px);
+
+background:#00C853;
+
+color:white;
+
+border-color:#00C853;
 
 }
 
