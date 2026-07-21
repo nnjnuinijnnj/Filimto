@@ -41,6 +41,34 @@ placeholder="مثلاً: آیا فیلم جوکر در فیلیمو هست؟">
 
 </button>
 
+  <div class="quick-title">
+🔥 سوال‌های آماده
+</div>
+
+<div class="quick-chat">
+
+<button onclick="fillQuestion('زخم کاری')">زخم کاری</button>
+
+<button onclick="fillQuestion('پایتخت')">پایتخت</button>
+
+<button onclick="fillQuestion('جوکر')">جوکر</button>
+
+<button onclick="fillQuestion('جیران')">جیران</button>
+
+<button onclick="fillQuestion('پوست شیر')">پوست شیر</button>
+
+<button onclick="fillQuestion('یاغی')">یاغی</button>
+
+<button onclick="fillQuestion('قورباغه')">قورباغه</button>
+
+<button onclick="fillQuestion('فیلم اکشن')">فیلم اکشن</button>
+
+<button onclick="fillQuestion('فیلم ترسناک')">فیلم ترسناک</button>
+
+<button onclick="fillQuestion('فیلم کمدی')">فیلم کمدی</button>
+
+</div>
+  
 <br><br>
 
 <div id="status">
@@ -100,6 +128,10 @@ window.location.href=
 
 }
 
+  function fillQuestion(text){
+    document.getElementById("searchBox").value = text;
+  }
+  
 </script>
 
 </body>
