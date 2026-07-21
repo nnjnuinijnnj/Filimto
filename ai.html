@@ -53,21 +53,50 @@ placeholder="مثلاً: آیا فیلم جوکر در فیلیمو هست؟">
 
 function startAI(){
 
+const text=document.getElementById("searchBox").value.toLowerCase();
+
 const status=document.getElementById("status");
 
-status.innerHTML="🧠 در حال تحلیل درخواست...";
+const steps=[
+
+"🧠 در حال تحلیل درخواست...",
+
+"🔍 لطفاً کمی صبر کنید...",
+
+"🎬 در حال جستجوی هوشمند...",
+
+"📚 بررسی آرشیو فیلم‌ها..."
+
+];
+
+let i=0;
+
+status.innerHTML="";
+
+const timer=setInterval(()=>{
+
+status.innerHTML=steps[i];
+
+i++;
+
+if(i>=steps.length){
+
+clearInterval(timer);
+
+status.innerHTML="✅ نتیجه پیدا شد. در حال انتقال...";
 
 setTimeout(()=>{
 
-status.innerHTML="🔍 لطفاً کمی صبر کنید...";
+const query=encodeURIComponent(text);
 
-},1500);
+window.location.href=
+"https://www.filimo.com/search?q="+query;
 
-setTimeout(()=>{
+},1800);
 
-status.innerHTML="🎬 هوش مصنوعی در حال جستجوی فیلم...";
+}
 
-},3000);
+},1200);
 
 }
 
