@@ -1,11 +1,11 @@
-const API_TOKEN = "400ae25d8aee49bd93e10efb65b50462";
+const API_KEY = "e9014cbd1ed6574d611845f404494ed3";
 
 const box = document.getElementById("matches");
 
-fetch("https://api.football-data.org/v4/matches", {
+fetch("https://v3.football.api-sports.io", {
     method: "GET",
     headers: {
-        "X-Auth-Token": API_TOKEN
+        "X-Auth-Key": API_KEY
     }
 })
 .then(response => {
