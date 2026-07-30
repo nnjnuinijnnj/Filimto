@@ -1457,3 +1457,39 @@ background:#00C853;
 color:white;
 
 }
+
+@media (max-width:700px){
+
+header{
+    height:auto;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+nav{
+    display:flex !important;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin-top:10px;
+}
+
+nav a{
+    margin:0;
+    padding:8px 12px;
+    font-size:14px;
+    background:#1b1b1b;
+    border-radius:15px;
+}
+
+.logo{
+    font-size:24px;
+}
+
+.hero{
+    margin-top:10px;
+}
+
+}
