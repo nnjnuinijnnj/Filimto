@@ -1,29 +1,42 @@
+const API_TOKEN = "400ae25d8aee49bd93e10efb65b50462";
 
-const API_KEY = "400ae25d8aee49bd93e10efb65b5046";
+const box = document.getElementById("matches");
 
-fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+fetch("https://api.football-data.org/v4/matches", {
+    method: "GET",
     headers: {
-        "X-Master-Key": API_KEY
+        "X-Auth-Token": API_TOKEN
     }
 })
-.then(res => res.json())
+.then(response => {
+    if (!response.ok) {
+        throw new Error("خطا: " + response.status);
+    }
+    return response.json();
+})
 .then(data => {
 
-    let box = document.getElementById("matches");
+    box.innerHTML = "";
 
-    data.record.forEach(match => {
+    data.matches.forEach(match => {
+
+        const homeScore =
+            match.score.fullTime.home ?? "-";
+
+        const awayScore =
+            match.score.fullTime.away ?? "-";
 
         box.innerHTML += `
 
         <div class="match-card">
 
-            <h3>⚽ ${match.home}</h3>
+            <h3>${match.homeTeam.shortName}</h3>
 
             <div class="score">
-            ${match.score}
+                ${homeScore} : ${awayScore}
             </div>
 
-            <h3>${match.away}</h3>
+            <h3>${match.awayTeam.shortName}</h3>
 
             <p>${match.status}</p>
 
@@ -32,5 +45,16 @@ fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
         `;
 
     });
+
+})
+.catch(error => {
+
+    box.innerHTML = `
+        <div class="match-card">
+            ❌ دریافت اطلاعات مسابقات انجام نشد.
+        </div>
+    `;
+
+    console.error(error);
 
 });
