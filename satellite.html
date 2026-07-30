@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ماهواره آنلاین</title>
+
+<style>
+body{
+background:#0b0b0b;
+font-family:tahoma;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+color:white;
+}
+
+.box{
+text-align:center;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:20px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.bar{
+display:none;
+width:280px;
+height:10px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+margin:25px auto;
+}
+
+.load{
+width:0%;
+height:100%;
+background:#00c853;
+animation:loading 2s linear forwards;
+}
+
+@keyframes loading{
+from{width:0%;}
+to{width:100%;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>📡 ماهواره آنلاین</h1>
+
+<p>برای ورود، ماهواره را روشن کنید.</p>
+
+<button onclick="startSatellite()">
+📡 روشن کردن ماهواره
+</button>
+
+<div class="bar" id="bar">
+<div class="load"></div>
+</div>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function startSatellite(){
+
+document.querySelector("button").style.display="none";
+
+document.getElementById("bar").style.display="block";
+
+document.getElementById("msg").innerHTML="⏳ در حال اتصال به ماهواره...";
+
+setTimeout(function(){
+
+window.location.href="https://iranintl.com";
+
+},2000);
+
+}
+
+</script>
+
+</body>
+</html>
