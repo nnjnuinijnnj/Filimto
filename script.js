@@ -34,3 +34,15 @@ function openMovie(id){
 window.location.href = "movie.html?id=" + id;
 
 }
+
+// اسلایدر
+const slider = document.getElementById("slider");
+
+movies.forEach(movie => {
+    slider.innerHTML += `
+        <div class="slide-card" onclick="openMovie(${movie.id})">
+            <img src="${movie.poster}">
+            <h3>${movie.title}</h3>
+        </div>
+    `;
+});
