@@ -25,7 +25,12 @@
 ]
 
 {
-  "title": "جمیله",
-  "image": "images/jamileh.jpg",
-  "page": "movie.html?id=jamileh"
+"id":"jamileh",
+"title":"جمیله",
+"poster":"images/jamileh.jpg",
+"description":"کانال خانوادگی جمیله؛ مجموعه‌ای از ویدیوهای روزمره، داستانی و اتفاقات خانوادگی.",
+"genre":"خانوادگی",
+"year":"2026",
+"rating":"8.5",
+"watch":"https://www.youtube.com/@jamileh2"
 }
