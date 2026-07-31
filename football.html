@@ -8,20 +8,50 @@
 <title>FilimBall</title>
 
 <link rel="stylesheet" href="football.css">
-
 </head>
 
 <body>
 
-  <h2>آپلود فیلم فوتبال</h2>
+<header>
+  <div class="logo">FILIMBALL ⚽</div>
+
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="movie.html">فیلم</a>
+    <a href="kids.html">🧸 فیلیم‌کیدز</a>
+    <a href="game.html">🎮 فیلیم‌گیم</a>
+    <a href="live.html">📺 لایو فوتبال</a>
+  </nav>
+</header>
+
+
+<section class="football-hero">
+  <h1>⚽ فیلیم‌بال</h1>
+  <p>نتایج و برنامه‌های فوتبال جهان</p>
+</section>
+
+
+<h2>🔥 بازی‌های امروز</h2>
+<section id="matches" class="matches"></section>
+
+
+<!-- ------------------------- -->
+<!-- بخش آپلود ویدیو فوتبال   -->
+<!-- ------------------------- -->
+
+<h2>آپلود فیلم فوتبال</h2>
 
 <input type="file" id="videoFile" accept="video/*">
-
 <button onclick="uploadVideo()">آپلود ویدیو</button>
 
 <div id="uploadedVideos"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<!-- ------------------------- -->
+<!-- کدهای Supabase            -->
+<!-- ------------------------- -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script>
 const supabaseUrl = "https://kkfkmpatxeuokhwxiani.supabase.co";
@@ -29,7 +59,9 @@ const supabaseKey = "sb_publishable_Ie_nh_pDh62Q06UPUEWjjw_dI1mS0tU";
 
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-  async function uploadVideo() {
+
+/* آپلود ویدیو */
+async function uploadVideo() {
     const file = document.getElementById("videoFile").files[0];
 
     if (!file) {
@@ -51,9 +83,11 @@ const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
     alert("✅ ویدیو آپلود شد");
     loadVideos();
-  }
+}
 
-  async function loadVideos() {
+
+/* نمایش ویدیوها */
+async function loadVideos() {
     const { data, error } = await supabase.storage
         .from("football-videos")
         .list();
@@ -77,48 +111,14 @@ const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 loadVideos();
 </script>
-  
-<header>
-
-<div class="logo">
-FILIMBALL ⚽
-</div>
-
-<nav>
-<a href="index.html">خانه</a>
-<a href="movie.html">فیلم</a>
-<a href="kids.html">🧸 فیلیم‌کیدز</a>
-<a href="game.html">🎮 فیلیم‌گیم</a>
-<a href="live.html">📺 لایو فوتبال</a>
-</nav>
-
-</header>
 
 
-<section class="football-hero">
-
-<h1>
-⚽ فیلیم‌بال
-</h1>
-
-<p>
-نتایج و برنامه‌های فوتبال جهان
-</p>
-
-</section>
-
-
-<h2>
-🔥 بازی‌های امروز
-</h2>
-
-<section id="matches" class="matches">
-
-</section>
-
+<!-- ------------------------- -->
+<!-- کد فوتبال اصلی سایت      -->
+<!-- ------------------------- -->
 
 <script src="football.js"></script>
 
 </body>
-
 </html>
+
