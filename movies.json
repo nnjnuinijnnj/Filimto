@@ -8,29 +8,30 @@
     "rating": "8.5",
     "poster": "https://via.placeholder.com/300x450",
     "description": "داستانی پرهیجان درباره قدرت و رقابت.",
-    "watch":"https://www.filimo.com/n/raymk"
+    "watch": "https://www.filimo.com/n/raymk"
   },
 
   {
-  "id": 2,
-  "title": "جیران",
-  "type": "سریال",
-  "year": "۱۴۰۰",
-  "genre": "تاریخی، عاشقانه",
-  "rating": "8.3",
-  "poster": "https://via.placeholder.com/300x450",
-  "description": "داستان عاشقانه‌ای در دوران ناصرالدین شاه قاجار.",
-  "watch": "https://www.filimo.com/m/85465"
-  }
+    "id": 2,
+    "title": "جیران",
+    "type": "سریال",
+    "year": "۱۴۰۰",
+    "genre": "تاریخی، عاشقانه",
+    "rating": "8.3",
+    "poster": "https://via.placeholder.com/300x450",
+    "description": "داستان عاشقانه‌ای در دوران ناصرالدین شاه قاجار.",
+    "watch": "https://www.filimo.com/m/85465"
+  },
 
-{
-"id":"jamileh",
-"title":"جمیله",
-"poster":"images/jamileh.jpg",
-"description":"کانال خانوادگی جمیله؛ مجموعه‌ای از ویدیوهای روزمره، داستانی و اتفاقات خانوادگی.",
-"genre":"خانوادگی",
-"year":"2026",
-"rating":"8.5",
-"watch":"https://www.youtube.com/@jamileh2"
-}
+  {
+    "id": "jamileh",
+    "title": "جمیله",
+    "type": "اختصاصی",
+    "year": "2026",
+    "genre": "خانوادگی",
+    "rating": "8.5",
+    "poster": "images/jamileh.jpg",
+    "description": "کانال خانوادگی جمیله؛ مجموعه‌ای از ویدیوهای روزمره، داستانی و اتفاقات خانوادگی.",
+    "watch": "https://www.youtube.com/@jamileh2"
+  }
 ]
