@@ -13,6 +13,71 @@
 
 <body>
 
+  <h2>آپلود فیلم فوتبال</h2>
+
+<input type="file" id="videoFile" accept="video/*">
+
+<button onclick="uploadVideo()">آپلود ویدیو</button>
+
+<div id="uploadedVideos"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+const supabaseUrl = "https://kkfkmpatxeuokhwxiani.supabase.co";
+const supabaseKey = "sb_publishable_Ie_nh_pDh62Q06UPUEWjjw_dI1mS0tU";
+
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  async function uploadVideo() {
+    const file = document.getElementById("videoFile").files[0];
+
+    if (!file) {
+        alert("لطفاً یک ویدیو انتخاب کن");
+        return;
+    }
+
+    const fileName = Date.now() + "-" + file.name;
+
+    const { data, error } = await supabase.storage
+        .from("football-videos")
+        .upload(fileName, file);
+
+    if (error) {
+        alert("❌ خطا در آپلود");
+        console.log(error);
+        return;
+    }
+
+    alert("✅ ویدیو آپلود شد");
+    loadVideos();
+  }
+
+  async function loadVideos() {
+    const { data, error } = await supabase.storage
+        .from("football-videos")
+        .list();
+
+    const box = document.getElementById("uploadedVideos");
+    box.innerHTML = "";
+
+    data.forEach(async file => {
+        const { data: urlData } = await supabase.storage
+            .from("football-videos")
+            .getPublicUrl(file.name);
+
+        box.innerHTML += `
+            <video width="300" controls>
+                <source src="${urlData.publicUrl}" type="video/mp4">
+            </video>
+            <br><br>
+        `;
+    });
+}
+
+loadVideos();
+</script>
+  
 <header>
 
 <div class="logo">
